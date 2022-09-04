@@ -145,35 +145,35 @@ def main_logic(result):
         nn.log('recommend default')
         return recommend_default()
     if result.has_entity('hangup_negative'):
-        if result.entity('hangup_negative'):
+        if result.entity('hangup_negative') == 'true':
             nn.log('hangup_negative')
             return hangup_negative()
     if result.has_entity('hangup_positive'):
-        if result.entity('hangup_positive'):
+        if result.entity('hangup_positive') == 'true':
             nn.log('hangup_positive')
             return hangup_positive()
     if result.has_entity('recommend_score_negative'):
-        if result.entity('recommend_score_negative'):
+        if result.entity('recommend_score_negative') == 'true':
             nn.log('recommend_score_negative')
             return recommend_score_negative()
     if result.has_entity('recommend_score_positive'):
-        if result.entity('recommend_score_positive'):
+        if result.entity('recommend_score_positive') == 'true':
             nn.log('recommend_score_positive')
             return recommend_score_positive()
     if result.has_entity('recommend_score_neutral'):
-        if result.entity('recommend_score_neutral'):
+        if result.entity('recommend_score_neutral') == 'true':
             nn.log('recommend_score_neutral')
             return recommend_score_neutral()
     if result.has_entity('recommend_repeat'):
-        if result.entity('recommend_repeat'):
+        if result.entity('recommend_repeat') == 'true':
             nn.log('recommend_repeat')
             return recommend_repeat()
     if result.has_entity('recommend_repeat_2'):
-        if result.entity('recommend_repeat_2'):
+        if result.entity('recommend_repeat_2') == 'true':
             nn.log('recommend_repeat_2')
             return recommend_repeat_2()
     if result.has_entity('recommend_forward'):
-        if result.entity('recommend_forward'):
+        if result.entity('recommend_forward') == 'true':
             nn.log('recommend_forward')
             return forward()
 
@@ -205,15 +205,15 @@ def hangup_logic(result):
         nv.say('hangup_null')
         return hangup_null()
     if result.has_entity('hangup_positive'):
-        if result.entity('hangup_positive'):
+        if result.entity('hangup_positive') == 'true':
             nn.log('hangup_positive')
             return hangup_positive()
     if result.has_entity('hangup_negative'):
-        if result.entity('hangup_negative'):
+        if result.entity('hangup_negative') == 'true':
             nn.log('hangup_negative')
             return hangup_negative()
     if result.has_entity('hangup_wrong_time'):
-        if result.entity('hangup_wrong_time'):
+        if result.entity('hangup_wrong_time') == 'true':
             nn.log('hangup_wrong_time')
             return hangup_wrong_time()
 
@@ -238,6 +238,6 @@ def forward():
 
 def forward_logic(result):
     if result.has_entity('forward'):
-        if result.entity('forward'):
+        if result.entity('forward') == 'true':
             nn.log('forward')
             return forward()
