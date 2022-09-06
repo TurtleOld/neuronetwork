@@ -28,7 +28,7 @@ def hello_null():
 def hello_default():
     nn.log('hello default')
     nv.say('recommend_main')
-    return hello_main()
+    return recommended_main()
 
 
 def hangup_wrong_time():
@@ -172,9 +172,9 @@ def main_logic(result):
         if result.entity('recommend_repeat_2') == 'true':
             nn.log('recommend_repeat_2')
             return recommend_repeat_2()
-    if result.has_entity('recommend_forward'):
-        if result.entity('recommend_forward') == 'true':
-            nn.log('recommend_forward')
+    if result.has_entity('forward'):
+        if result.entity('forward') == 'true':
+            nn.log('forward')
             return forward()
 
 
