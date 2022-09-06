@@ -218,22 +218,11 @@ def hangup_logic(result):
             return hangup_wrong_time()
 
 
-def forward_main():
-    nv.set_default('listen', {'no_input_timeout': 4000,
-                              'recognition_timeout': 30000,
-                              'speech_complete_timeout': 1500,
-                              'asr_complete_timeout': 2500})
-    with nv.listen(500, entities=[
-        'forward',
-    ]) as result:
-        pass
-    return forward_logic(result)
-
-
 def forward():
     nn.log('forward')
     nv.say('forward')
-    return forward_main()
+    nn.dialog.entry_point = 'operator'
+    return
 
 
 def forward_logic(result):
